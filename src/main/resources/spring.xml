@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    这里定义一个bean，通过init-method，destroy-method属性指定bean的创建，销毁方法。
+    <bean id="person" class="com.ice.spring.bean.Person" init-method="getName" destroy-method="getSex">
+        <property name="name" value="ice"></property>
+        <property name="sex" value="female"></property>
+    </bean>
+</beans>

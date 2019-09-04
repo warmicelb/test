@@ -1,6 +1,5 @@
 package com.ice.concurrent.framework.core;
 
-import com.alibaba.fastjson.JSON;
 import com.ice.concurrent.framework.JobInfo;
 
 import java.util.concurrent.DelayQueue;

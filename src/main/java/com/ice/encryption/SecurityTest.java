@@ -1,16 +1,17 @@
 package com.ice.encryption;
 
-import com.sun.javafx.scene.traversal.Algorithm;
 import org.apache.commons.codec.binary.Base64;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+
 import javax.crypto.*;
 import javax.crypto.spec.DESKeySpec;
 import java.io.IOException;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
-import java.security.spec.KeySpec;
 import java.security.spec.PKCS8EncodedKeySpec;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author: ice
@@ -118,5 +119,10 @@ public class SecurityTest {
     public static void aes(){
         String ori = "分为奇偶IE见覅金额为我哦佛偈防守打法";
 
+    }
+
+    public void te(){
+        Pattern compile = Pattern.compile("(./1)");
+        Matcher matcher = compile.matcher("ssss");
     }
 }

@@ -25,7 +25,7 @@ public class CollectionMethodTest {
         list2.add(5);
         list2.add(3);
         System.out.println(list1.size()+":"+list2.size());
-        //retainAll 将当前集合list1和目标集合list2做交集，基础不属于交集中的元素，返回该集合是否有变化。
+        //retainAll 将当前集合list1和目标集合list2做交集，移除不属于交集中的元素，返回该集合是否有变化。
         boolean b = list1.retainAll(list2);
         System.out.println(b+"list1:"+list1+",list2:"+list2);
         list1.iterator();
