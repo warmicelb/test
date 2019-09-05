@@ -49,6 +49,20 @@
       <version>1</version>
     </dependency>
 
+    <!--数据库连接池-->
+    <dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>c3p0</artifactId>
+    <version>0.9.5.2</version>
+    </dependency>
+
+    <!--增加aop支持-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.1.6.RELEASE</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
     <dependency>
       <groupId>com.alibaba</groupId>

@@ -5,8 +5,12 @@ import com.ice.spring.bean.Person;
 import com.ice.spring.bean.Son;
 import com.ice.spring.bean.lifecycle.Bus;
 import com.ice.spring.config.*;
+import com.ice.spring.config.aop.config.MyAOPconfig;
+import com.ice.spring.config.aop.config.MyCalculator;
+import com.ice.spring.config.database.MyDatabaseConfig;
 import com.ice.spring.config.lifecycle.MyLifeCycleConfig;
 import com.ice.spring.controller.PersonController;
+import com.ice.spring.dao.PersonDao;
 import com.ice.spring.service.PersonService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -114,5 +118,25 @@ public class SpringTest {
         //测试注入的优先级
 //        PersonController bean1 = applicationContext.getBean(PersonController.class);
 //        bean1.printPerson();
+    }
+
+    /**
+     * 测试aop
+     */
+    @Test
+    public void test07(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyAOPconfig.class);
+        MyCalculator bean = applicationContext.getBean(MyCalculator.class);
+        bean.calculate(4,2);
+    }
+
+    /**
+     * 测试声明式事物
+     */
+    @Test
+    public void test08(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyDatabaseConfig.class);
+        PersonDao personDao = applicationContext.getBean(PersonDao.class);
+        personDao.select();
     }
 }
