@@ -50,7 +50,7 @@ public class SpringTest {
         }
         Person person1 = applicationContext.getBean(Person.class);
         Person person2 = applicationContext.getBean(Person.class);
-        //之类测试多实例下返回的对象是否相同
+        //这里测试多实例下返回的对象是否相同
         System.out.println(person1==person2);
         System.out.println("before use son");
         Object son = applicationContext.getBean("son");

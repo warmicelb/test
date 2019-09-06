@@ -17,6 +17,9 @@ public class PersonDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    /**
+     * 事物注解
+     */
     @Transactional
     public void select(){
         jdbcTemplate.update("update user set status=status+1 where id=1");
