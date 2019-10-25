@@ -140,6 +140,36 @@
       <version>4.5.9</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.elasticsearch.client</groupId>
+      <artifactId>elasticsearch-rest-client</artifactId>
+      <version>6.7.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+      <version>3.4.8</version>
+    </dependency>
+    <!-- zkclient依赖 -->
+    <dependency>
+      <groupId>com.101tec</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.10</version>
+    </dependency>
+    <!-- curator依赖 -->
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-framework</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+    <dependency>
+      <groupId>org.apache.curator</groupId>
+      <artifactId>curator-recipes</artifactId>
+      <version>4.2.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>

@@ -7,6 +7,7 @@ import com.ice.spring.bean.lifecycle.Bus;
 import com.ice.spring.config.*;
 import com.ice.spring.config.aop.config.MyAOPconfig;
 import com.ice.spring.config.aop.config.MyCalculator;
+import com.ice.spring.config.comp.ComponentConfig;
 import com.ice.spring.config.database.MyDatabaseConfig;
 import com.ice.spring.config.lifecycle.MyLifeCycleConfig;
 import com.ice.spring.controller.PersonController;
@@ -138,5 +139,20 @@ public class SpringTest {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyDatabaseConfig.class);
         PersonDao personDao = applicationContext.getBean(PersonDao.class);
         personDao.select();
+    }
+
+    /**
+     * 测试bean定义的后置处理器
+     */
+    @Test
+    public void test09(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentConfig.class);
+        ((AnnotationConfigApplicationContext) applicationContext).close();
+    }
+
+    @Test
+    public void test10(){
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ComponentConfig.class);
+        ((AnnotationConfigApplicationContext) applicationContext).close();
     }
 }
