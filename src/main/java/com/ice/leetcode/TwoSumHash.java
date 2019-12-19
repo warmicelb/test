@@ -4,12 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 根据两数之和，找出数组中匹配的一对数字
  * @ClassName Test
  * @Description TODO
  * @Author liubin
  * @Date 2019/4/15 7:12 PM
  **/
-public class Test {
+public class TwoSumHash {
     public static void main(String[] args) {
         int[] ints = twoSumHash(new int[]{2, 3, 7, 6, 5}, 9);
         System.out.println(ints);
